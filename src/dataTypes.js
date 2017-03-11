@@ -3,4 +3,7 @@ function dataTypes(data){
 	if(typeof(data) === 'string'){
 		return data.length;
 	}
+	else if(typeof(data) === 'boolean'){
+		return data;
+	}
 }
