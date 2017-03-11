@@ -22,5 +22,14 @@ function dataTypes(data){
 			return "equal to 100";
 		}
 	}
-	
+	else if(Array.isArray(data)){
+		//returns undefined if the length of the array is less than 3
+		if(data.length < 3){
+			return undefined;
+		}
+		//returns the third element of the array
+		else{
+			return data[2];
+		}
+	}
 }
