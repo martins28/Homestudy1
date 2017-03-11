@@ -22,6 +22,7 @@ function dataTypes(data){
 			return "equal to 100";
 		}
 	}
+	//checks if data(input) is an array
 	else if(Array.isArray(data)){
 		//returns undefined if the length of the array is less than 3
 		if(data.length < 3){
@@ -31,5 +32,13 @@ function dataTypes(data){
 		else{
 			return data[2];
 		}
+	}
+	//calling the argument with a true value if data(argument) is a function 
+	else if(typeof(data) === 'function'){
+		return data(true);
+	}
+	//returns 'no value' if data(input) has a value of either null or undefined 
+	else if(data === null || data === undefined){
+		return 'no value';
 	}
 }
